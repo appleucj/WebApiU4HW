@@ -1,0 +1,36 @@
+#timer{
+    margin-top: 0rem;
+    float: right;
+}
+
+#title{
+    margin-top: 5rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.container{
+    text-align: center;
+}
+
+.button{
+    background-color: blueviolet;
+    color:#ffffff;
+}
+
+.choice{
+    background-color: blueviolet;
+    margin: 2rem;
+    color: azure;
+}
+#result{
+    text-align: center;
+}
+
+#submit{
+    color: #ffffff;
+    background-color: blueviolet;
+    margin-top: 2rem;
+    margin-left: 50%;
+    
+}
