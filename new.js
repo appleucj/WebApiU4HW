@@ -23,7 +23,7 @@ var questions = [
     //   answer:"c"
     // },
   ]
-
+  var score = 0;
 var questionsCounter = 0;
 var description  = document.getElementById("description");
 var timer;
@@ -61,7 +61,9 @@ $("#start").on("click", function(){
 });
 
 //high score page
-      //  $("#submit").addEventListener("click", hspage());
+       $("#submit").click(function hspage(){
+        console.log("hspage");
+      });
       // function hspage (){
       //     console.log("hspage");
       // }
@@ -84,7 +86,7 @@ for (j=0; j<4;j++){
     choicesEl.appendChild(choiceNode);
 };
 };
-var score = 0;
+
 function questionClick(){
   if (this.value === questions[questionsCounter].answer){
    score += 30;
