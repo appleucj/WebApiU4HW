@@ -10,24 +10,24 @@ var questions = [
       choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
       answer: "parentheses"
     }, 
-    // {  title: "aaaaa",
-    //   choices: ["a","b","c","d"],
-    //   answer:"a"
-    // },
-    // {  title: "bbbbb",
-    //   choices: ["a","b","c","d"],
-    //   answer:"b"
-    // },
-    // {  title: "ccccc",
-    //   choices: ["a","b","c","d"],
-    //   answer:"c"
-    // },
+    {  title: "aaaaa",
+     choices: ["a","b","c","d"],
+     answer:"a"
+     },
+     {  title: "bbbbb",
+       choices: ["a","b","c","d"],
+       answer:"b"
+     },
+     {  title: "ccccc",
+       choices: ["a","b","c","d"],
+       answer:"c"
+     }
   ]
   var score = 0;
 var questionsCounter = 0;
 var description  = document.getElementById("description");
 var timer;
-var timeLine = 5*(questions.length+1);
+var timeLine = 1*(questions.length+1);
  // create input area
 var submit = document.createElement("BUTTON");
 submit.innerHTML="submit";
@@ -60,31 +60,34 @@ $("#start").on("click", function(){
       counter();
 });
 
+function myFunction(){
+    console.log("hspage");
+}
+
 //high score page
-       $("#submit").click(function hspage(){
-        console.log("hspage");
-      });
+      
       // function hspage (){
       //     console.log("hspage");
       // }
 
 function counter(){
-var currentQuestion = questions[questionsCounter];
-$("#title").text(questions[questionsCounter].title);
-$("#description").empty();
+  var currentQuestion = questions[questionsCounter];
 
-for (j=0; j<4;j++){
-  var choicesEl=document.getElementById("description");
-  var choice = currentQuestion.choices[j];
-  var choiceNode = document.createElement("button");
-    choiceNode.setAttribute("class", "choice");
-    choiceNode.setAttribute("value", choice);
-    choiceNode.textContent = j + 1 + ". " + choice;
-    // attach click event listener to each choice
-    choiceNode.onclick = questionClick;
-    // display on the page
-    choicesEl.appendChild(choiceNode);
-};
+  $("#title").text(questions[questionsCounter].title);
+  $("#description").empty();
+
+  for (j=0; j<4;j++){
+    var choicesEl=document.getElementById("description");
+    var choice = currentQuestion.choices[j];
+    var choiceNode = document.createElement("button");
+      choiceNode.setAttribute("class", "choice");
+      choiceNode.setAttribute("value", choice);
+      choiceNode.textContent = j + 1 + ". " + choice;
+      // attach click event listener to each choice
+      choiceNode.onclick = questionClick;
+      // display on the page
+      choicesEl.appendChild(choiceNode);
+  };
 };
 
 function questionClick(){
@@ -95,11 +98,17 @@ function questionClick(){
    else{   
       $("#result").text("Wrong, Your score is:" +score+".      When time run out will jump to next page.") ;
    }
-   questionsCounter++;
+   if (questionsCounter < questions.length - 1 ){
+   questionsCounter++
+    };
+   console.log(questionsCounter);
    counter();
 };
 
-
+// $("button").click(function(){
+//   console.log('anonymous')
+  
+// });
   
 
 
