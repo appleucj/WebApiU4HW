@@ -1,36 +1,44 @@
-#timer{
-    margin-top: 0rem;
-    float: right;
+#timer {
+  margin-top: 0rem;
+  float: right;
 }
 
-#title{
-    margin-top: 5rem;
-    font-weight: bold;
-    font-size: 1.5rem;
+#title {
+  margin-top: 5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
-.container{
-    text-align: center;
+.container {
+  text-align: center;
 }
 
-.button{
-    background-color: blueviolet;
-    color:#ffffff;
+.button {
+  background-color: blueviolet;
+  color: #ffffff;
 }
 
-.choice{
-    background-color: blueviolet;
-    margin: 2rem;
-    color: azure;
+.choice {
+  background-color: blueviolet;
+  margin: 2rem;
+  color: azure;
 }
-#result{
-    text-align: center;
+#result {
+  text-align: center;
 }
 
-#submit{
-    color: #ffffff;
-    background-color: blueviolet;
-    margin-top: 2rem;
-    margin-left: 50%;
-    
+#submit,
+#goBack,
+#cancle {
+  color: #ffffff;
+  background-color: blueviolet;
+  margin: 2rem;
+}
+
+#body {
+  text-align: center;
+}
+#viewHighscore {
+  margin-top: 0;
+  margin-left: 0;
 }
